@@ -1,2 +1,1 @@
-# proiect-dotnet-breast-cancer
-Project .NET - Breast Cancer Risk Prediction 
+# Project .NET - Breast Cancer Risk Prediction 
