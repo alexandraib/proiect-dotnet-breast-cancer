@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = WebAPI
-build_property.ProjectDir = C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\WebAPI\
+build_property.ProjectDir = /Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/WebAPI/

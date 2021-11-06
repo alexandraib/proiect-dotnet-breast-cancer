@@ -7,7 +7,6 @@ namespace Application.Interfaces
     public interface IApplicationContext
     {
         DbSet<User> Users { get; set; }
-
         Task<int> SaveChangesAsync();
     }
 }

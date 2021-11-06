@@ -1,0 +1,57 @@
+﻿<Properties StartupConfiguration="{00F060AB-70B0-4D07-A822-0EC84E3FE2F4}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Domain/Entities/User.cs" Line="9" Column="38" />
+      <File FileName="Application/Interfaces/IApplicationContext.cs" Line="1" Column="1" />
+      <File FileName="Application/Properties/AssemblyInfo.cs" />
+      <File FileName="Persistence/Context/UserContext.cs" Line="18" Column="50" />
+      <File FileName="Persistence/PersistenceDI.cs" Line="11" Column="42" />
+      <File FileName="WebAPI/Program.cs" Line="1" Column="1" />
+      <File FileName="WebAPI/Startup.cs" Line="32" Column="34" />
+      <File FileName="Application/Features/Queries/GetUserByIdQuery.cs" Line="7" Column="43" />
+      <File FileName="Application/Features/Queries/GetUserByIdQueryHandler.cs" Line="26" Column="25" />
+      <File FileName="Application/Features/Queries/GetUsersQuery.cs" Line="10" Column="8" />
+      <File FileName="Application/Features/Queries/GetUsersQueryHandler.cs" Line="25" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Breast.Cancer.Prediction" expanded="True">
+            <Node name="Core" expanded="True">
+              <Node name="Application" expanded="True">
+                <Node name="Features" expanded="True">
+                  <Node name="Queries" expanded="True">
+                    <Node name="GetUsersQueryHandler.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="Domain" expanded="True">
+                <Node name="Entities" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Persistence" expanded="True">
+                <Node name="Context" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Presentation" expanded="True">
+              <Node name="WebAPI" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Properties" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Presentation.WebAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

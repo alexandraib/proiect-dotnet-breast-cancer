@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E36060F1-DA49-4B0E-888C-3F173E5846A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A6EB992A-37BA-434B-A210-38AE6D2A617A}"
@@ -42,5 +43,12 @@ Global
 		{00F060AB-70B0-4D07-A822-0EC84E3FE2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F060AB-70B0-4D07-A822-0EC84E3FE2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F060AB-70B0-4D07-A822-0EC84E3FE2F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
 	EndGlobalSection
 EndGlobal
