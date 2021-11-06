@@ -1,0 +1,12 @@
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\bin\Debug\net5.0\Domain.deps.json
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\bin\Debug\net5.0\Domain.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\bin\Debug\net5.0\ref\Domain.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\bin\Debug\net5.0\Domain.pdb
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\ref\Domain.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\TestDomain\obj\Debug\net5.0\Domain.pdb
