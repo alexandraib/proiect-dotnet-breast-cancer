@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Application.Features.Queries
 {
     public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, IEnumerable<User>>
     {
-        private readonly IApplicationContext context;
+        private readonly IUserRepository repository;
 
-        public GetUsersQueryHandler(IApplicationContext context)
+        public GetUsersQueryHandler(IUserRepository repository)
         {
-            this.context = context;
+            this.repository = repository;
         }
         public async Task<IEnumerable<User>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
         {
-            return await context.Users.ToListAsync();
-             
+            return await repository.GetAllAsync();
         }
     }
 }

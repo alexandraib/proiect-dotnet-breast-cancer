@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WmQzkROIcaCApxi/1GbBK7o2OYV769v8EdXxsRqNscuI4fXlvM0Z2D56PPyNRq+UXa+9TIfrQsJEAxrJYKVy0w==",
+  "dgSpecHash": "sHC1etj4YwcdlVMub1SxOKOKDwNbcleEVHNqmf1aqQVrRBUJV+Bzlv+6g6ghmyw28WbJUZmtb1V/L/ZRVguq9Q==",
   "success": true,
   "projectFilePath": "C:\\Facultate_3_Sem_1\\dotnet\\proiect-dotnet-breast-cancer\\backend\\Breast.Cancer.Prediction\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emanu\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\emanu\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
