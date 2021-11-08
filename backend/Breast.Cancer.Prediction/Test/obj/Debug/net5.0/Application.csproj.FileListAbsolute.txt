@@ -1,0 +1,15 @@
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.csproj.AssemblyReference.cache
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.AssemblyInfo.cs
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\bin\Debug\net5.0\Application.deps.json
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\bin\Debug\net5.0\Application.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\bin\Debug\net5.0\ref\Application.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\bin\Debug\net5.0\Application.pdb
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\bin\Debug\net5.0\Domain.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\bin\Debug\net5.0\Domain.pdb
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.csproj.CopyComplete
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\ref\Application.dll
+C:\Facultate_3_Sem_1\dotnet\proiect-dotnet-breast-cancer\backend\Breast.Cancer.Prediction\Test\obj\Debug\net5.0\Application.pdb
