@@ -1,6 +1,0 @@
-/Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/Domain/bin/Debug/Domain.dll
-/Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/Domain/bin/Debug/Domain.pdb
-/Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/Domain/obj/Debug/Domain.csproj.AssemblyReference.cache
-/Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/Domain/obj/Debug/Domain.csproj.CoreCompileInputs.cache
-/Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/Domain/obj/Debug/Domain.dll
-/Users/tiberiu07/Documents/Rider/dotNETProject/proiect-dotnet-breast-cancer/backend/Breast.Cancer.Prediction/Domain/obj/Debug/Domain.pdb

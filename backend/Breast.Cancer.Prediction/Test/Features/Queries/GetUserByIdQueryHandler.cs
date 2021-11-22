@@ -4,24 +4,23 @@ using System.Threading.Tasks;
 using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace Application.Features.Queries
 {
     public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, User>
     {
-        private readonly IApplicationContext context;
+        private readonly IUserRepository repository;
 
-        public GetUserByIdQueryHandler(IApplicationContext context)
+        public GetUserByIdQueryHandler(IUserRepository repository)
         {
-            this.context = context;
+            this.repository = repository;
         }
         public async Task<User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            var user = await context.Users.FirstOrDefaultAsync(u => u.Id == request.Id);
+            var user = await repository.GetByIdAsync(request.Id);
             if (user == null)
             {
-                throw new Exception("Proudct does not exist");
+                throw new Exception("User does not exist");
             }
             return user;
         }
