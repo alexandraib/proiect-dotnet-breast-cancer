@@ -22,7 +22,7 @@ namespace Application.Features.Commands
                 throw new Exception("User doesn't exist!");
             }
 
-            user.UserName = request.UserName;
+            user.Email = request.Email;
             user.Password = request.Password;
             user.UserType = request.UserType;
             user.Age = request.Age;

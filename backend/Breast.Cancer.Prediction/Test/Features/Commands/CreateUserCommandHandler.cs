@@ -19,7 +19,7 @@ namespace Application.Features.Commands
         {
             var user = new User
             {
-                UserName = request.UserName,
+                Email = request.Email,
                 Password = request.Password,
                 UserType = request.UserType,
                 Age = request.Age

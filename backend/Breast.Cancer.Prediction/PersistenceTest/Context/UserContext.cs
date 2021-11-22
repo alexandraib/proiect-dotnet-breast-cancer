@@ -7,6 +7,10 @@ namespace Persistence.Context
 {
     public class UserContext : DbContext, IApplicationContext
     {
+        public UserContext()
+        {
+
+        }
         public UserContext(DbContextOptions<UserContext> options) : base(options)
         {
             
