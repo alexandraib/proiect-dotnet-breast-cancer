@@ -21,7 +21,7 @@ namespace Application.Features.Queries
             User user = await repository.GetByEmailAsync(request.Email);
             if (user == null || user.Id == Guid.Empty)
             {
-                throw new Exception("User doesn't exist!");
+                throw new ArgumentException("User doesn't exist!");
             }
 
             if (user.Password != request.Password)

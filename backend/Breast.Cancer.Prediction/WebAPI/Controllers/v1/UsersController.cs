@@ -19,7 +19,14 @@ namespace WebAPI.Controllers.v1
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
         {
-            return Ok(await mediator.Send(command));
+            try
+            {
+                return Ok(await mediator.Send(command));
+            }
+            catch(ArgumentException e)
+            {
+                return Conflict("Email already in use!");
+            }
         }
 
         [HttpGet]
@@ -33,12 +40,13 @@ namespace WebAPI.Controllers.v1
         {
             try
             {
-                return Ok(await mediator.Send(new LoginUserQuery()));
+                return Ok(await mediator.Send(command));
             }
             catch (ArgumentException e)
             {
                 return Unauthorized("Invalid credentials!");
             }
+            
         }
 
         [HttpPut]

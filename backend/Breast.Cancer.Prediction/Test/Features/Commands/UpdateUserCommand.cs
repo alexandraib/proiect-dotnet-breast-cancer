@@ -13,7 +13,5 @@ namespace Application.Features.Commands
         public string Password { get; set; }
 
         public string UserType { get; set; }
-
-        public int Age { get; set; }
     }
 }

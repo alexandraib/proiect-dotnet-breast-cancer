@@ -9,7 +9,5 @@ namespace Domain.Entities
         public string Password { get; set; }
 
         public string UserType { get; set; }
-
-        public int Age { get; set; }
     }
 }
