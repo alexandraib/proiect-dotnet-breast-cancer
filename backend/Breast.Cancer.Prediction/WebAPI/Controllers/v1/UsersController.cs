@@ -40,7 +40,8 @@ namespace WebAPI.Controllers.v1
         {
             try
             {
-                return Ok(await mediator.Send(command));
+                var userId = await mediator.Send(command);
+                return Ok(JwtManager.GenerateToken(command.Email));
             }
             catch (ArgumentException e)
             {
