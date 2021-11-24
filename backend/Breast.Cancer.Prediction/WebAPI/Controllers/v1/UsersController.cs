@@ -6,8 +6,10 @@ using System;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers.v1
-{  
-    [ApiVersion("1.0")]
+{
+
+    [Route("api/users")]
+    [ApiController]
     public class UsersController : BaseController
     {
         public UsersController(IMediator mediator) : base(mediator)
@@ -17,13 +19,34 @@ namespace WebAPI.Controllers.v1
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
         {
-            return Ok(await mediator.Send(command));
+            try
+            {
+                return Ok(await mediator.Send(command));
+            }
+            catch(ArgumentException e)
+            {
+                return Conflict("Email already in use!");
+            }
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(await mediator.Send(new GetUsersQuery()));
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> GetJwt([FromBody] LoginUserQuery command)
+        {
+            try
+            {
+                return Ok(await mediator.Send(command));
+            }
+            catch (ArgumentException e)
+            {
+                return Unauthorized("Invalid credentials!");
+            }
+            
         }
 
         [HttpPut]
@@ -35,5 +58,7 @@ namespace WebAPI.Controllers.v1
             }
             return Ok(await mediator.Send(command));
         }
+
+
     }
 }

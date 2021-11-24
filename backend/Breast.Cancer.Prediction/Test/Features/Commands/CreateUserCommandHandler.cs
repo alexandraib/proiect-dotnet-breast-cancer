@@ -17,12 +17,17 @@ namespace Application.Features.Commands
         }
         public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            User databaseUser = await repository.GetByEmailAsync(request.Email);
+            if (!(databaseUser == null || databaseUser.Id == Guid.Empty))
+            {
+                throw new ArgumentException("User already exists!");
+            }
+
             var user = new User
             {
-                UserName = request.UserName,
+                Email = request.Email,
                 Password = request.Password,
-                UserType = request.UserType,
-                Age = request.Age
+                UserType = request.UserType
             };
             await repository.AddAsync(user);
             return user.Id;

@@ -9,7 +9,7 @@ namespace Persistence.v1
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
-        private readonly UserContext context;
+        protected readonly UserContext context;
 
         public Repository(UserContext context)
         {
