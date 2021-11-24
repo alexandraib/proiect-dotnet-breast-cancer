@@ -10,7 +10,7 @@ namespace Persistence
     {
         public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<UserContext>(options => options.UseSqlServer(configuration.GetConnectionString("DatabaseConnection"), b => b.MigrationsAssembly(typeof(UserContext).Assembly.FullName)));
+            services.AddDbContext<UserContext>(options => options.UseNpgsql(configuration.GetConnectionString("DatabaseConnection"), b => b.MigrationsAssembly(typeof(UserContext).Assembly.FullName)));
             services.AddScoped<IApplicationContext>(provider => provider.GetService<UserContext>());
         }
     }
