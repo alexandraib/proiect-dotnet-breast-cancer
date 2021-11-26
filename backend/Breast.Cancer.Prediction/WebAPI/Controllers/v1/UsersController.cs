@@ -1,5 +1,6 @@
 ﻿using Application.Features.Commands;
 using Application.Features.Queries;
+using Domain.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,7 +14,7 @@ namespace WebAPI.Controllers.v1
     public class UsersController : BaseController
     {
         public UsersController(IMediator mediator) : base(mediator)
-        { 
+        {
         }
 
         [HttpPost]
@@ -23,9 +24,9 @@ namespace WebAPI.Controllers.v1
             {
                 return Ok(await mediator.Send(command));
             }
-            catch(ArgumentException e)
+            catch (EntityAlreadyExistsException e)
             {
-                return Conflict("Email already in use!");
+                return Conflict(e.Message);
             }
         }
 
@@ -43,21 +44,31 @@ namespace WebAPI.Controllers.v1
                 var user = await mediator.Send(command);
                 return Ok(JwtManager.GenerateToken(user.Email, user.UserType));
             }
-            catch (ArgumentException e)
+            catch (InvalidCredentialsException e)
             {
-                return Unauthorized("Invalid credentials!");
+                return Unauthorized(e.Message);
             }
-            
+            catch (EntityNotFoundException e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpPut]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateUserCommand command)
         {
-            if(id != command.Id)
+            if (id != command.Id)
             {
                 return BadRequest();
             }
-            return Ok(await mediator.Send(command));
+            try
+            {
+                return Ok(await mediator.Send(command));
+            }
+            catch (EntityNotFoundException e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
 

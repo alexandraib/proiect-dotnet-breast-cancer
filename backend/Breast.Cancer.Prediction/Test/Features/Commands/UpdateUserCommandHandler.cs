@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using MediatR;
+using Domain.Exceptions;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Application.Features.Commands
             var user = repository.GetByIdAsync(request.Id).Result;
             if(user == null || user.Id == Guid.Empty)
             {
-                throw new Exception("User doesn't exist!");
+                throw new EntityNotFoundException("User doesn't exist!");
             }
 
             user.Email = request.Email;

@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
+using Domain.Exceptions;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -21,12 +22,12 @@ namespace Application.Features.Queries
             User user = await repository.GetByEmailAsync(request.Email);
             if (user == null || user.Id == Guid.Empty)
             {
-                throw new ArgumentException("User doesn't exist!");
+                throw new EntityNotFoundException("User doesn't exist!");
             }
 
             if (user.Password != request.Password)
             {
-                throw new ArgumentException("Password missmatch!");
+                throw new InvalidCredentialsException("Password missmatch!");
             }
             return user;
         }

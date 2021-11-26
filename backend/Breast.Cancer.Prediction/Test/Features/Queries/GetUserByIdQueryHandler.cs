@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Application.Interfaces;
 using Domain.Entities;
+using Domain.Exceptions;
 using MediatR;
 
 namespace Application.Features.Queries
@@ -20,7 +21,7 @@ namespace Application.Features.Queries
             var user = await repository.GetByIdAsync(request.Id);
             if (user == null)
             {
-                throw new Exception("User does not exist");
+                throw new EntityNotFoundException("User does not exist");
             }
             return user;
         }

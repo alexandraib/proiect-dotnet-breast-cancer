@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
+using Domain.Exceptions;
 using MediatR;
 using System;
 using System.Threading;
@@ -20,7 +21,7 @@ namespace Application.Features.Commands
             User databaseUser = await repository.GetByEmailAsync(request.Email);
             if (!(databaseUser == null || databaseUser.Id == Guid.Empty))
             {
-                throw new ArgumentException("User already exists!");
+                throw new EntityAlreadyExistsException("Email already in use!");
             }
 
             var user = new User
