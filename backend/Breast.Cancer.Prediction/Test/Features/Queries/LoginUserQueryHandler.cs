@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Queries
 {
-    public class LoginUserQueryHandler : IRequestHandler<LoginUserQuery, Guid>
+    public class LoginUserQueryHandler : IRequestHandler<LoginUserQuery, User>
     {
         private readonly IUserRepository repository;
 
@@ -16,7 +16,7 @@ namespace Application.Features.Queries
         {
             this.repository = repository;
         }
-        public async Task<Guid> Handle(LoginUserQuery request, CancellationToken cancellationToken)
+        public async Task<User> Handle(LoginUserQuery request, CancellationToken cancellationToken)
         {
             User user = await repository.GetByEmailAsync(request.Email);
             if (user == null || user.Id == Guid.Empty)
@@ -28,7 +28,7 @@ namespace Application.Features.Queries
             {
                 throw new ArgumentException("Password missmatch!");
             }
-            return user.Id;
+            return user;
         }
     }
 }

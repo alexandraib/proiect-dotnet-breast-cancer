@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Queries
 {
-    public class LoginUserQuery : IRequest<Guid>
+    public class LoginUserQuery : IRequest<User>
     {
         public string Email { get; set; }
         public string Password { get; set; }
