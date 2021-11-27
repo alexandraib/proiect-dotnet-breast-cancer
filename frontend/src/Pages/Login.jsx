@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import LoginForm from "../Components/LoginForm";
 import "./Login.css";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "../store/auth";
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const hardCodedData = {
@@ -9,35 +12,29 @@ const Login = () => {
     password: "bezz23",
   };
 
-  const [user, setUser] = useState({ email: "", password: "" });
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const [error, setError] = useState("");
 
   const loginHandler = (details) => {
+    // BackEnd credentials Validations
     if (
       details.email === hardCodedData.email &&
       details.password === hardCodedData.password
     ) {
-      console.log("Logged In.");
-      setUser({ email: details.email, password: details.password });
+      dispatch(
+        authActions.login({ email: details.email, password: details.password })
+      );
     } else {
-      console.log("No Match");
       setError("Invalid Credentials");
     }
-  };
-
-  const logoutHandler = () => {
-    setUser({ email: "", password: "" });
-    setError("");
   };
 
   return (
     <React.Fragment>
       <div className="login-wrapper">
-        {user.email !== "" ? (
-          <div className="welcome">
-            <h2>Welcome</h2>
-            <button onClick={logoutHandler}>Logout</button>
-          </div>
+        {isAuthenticated ? (
+          <Navigate to="/welcome" />
         ) : (
           <LoginForm loginHandler={loginHandler} error={error} />
         )}
