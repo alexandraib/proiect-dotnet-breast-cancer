@@ -7,11 +7,10 @@ const RegisterForm = (props) => {
     userPassword: "",
     userFirstName: "",
     userLastName: "",
-    ruserPassword: "",
   });
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    props.registerHandler(credentials);
+    await props.registerHandler(credentials);
   };
 
   const emailHandler = (e) => {
@@ -30,16 +29,13 @@ const RegisterForm = (props) => {
     e.preventDefault();
     setCredentials({ ...credentials, userLastName: e.target.value });
   };
-  const rpasswordHandler = (e) => {
-    e.preventDefault();
-    setCredentials({ ...credentials, ruserPassword: e.target.value });
-  };
 
   return (
     <form onSubmit={submitHandler} className="login-form">
       <div className="form-container">
         <h2>Register</h2>
         {props.error !== "" ? <div className="error">{props.error}</div> : ""}
+        {props.success !== "" ? <div className="success">{props.success}</div> : ""}
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -58,16 +54,6 @@ const RegisterForm = (props) => {
             id="password"
             onChange={passwordHandler}
             value={credentials.userPassword}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="rpassword">Repeat Password:</label>
-          <input
-            type="password"
-            name="rpassword"
-            id="rpassword"
-            onChange={rpasswordHandler}
-            value={credentials.ruserPassword}
           />
         </div>
         <div className="form-group">

@@ -11,6 +11,7 @@ const Welcome = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(authActions.logout());
+    localStorage.removeItem("token");
   };
 
   return (

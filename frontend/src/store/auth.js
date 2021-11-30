@@ -1,10 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+function parseJWT(token) {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+  return JSON.parse(jsonPayload);
+};
+
 const authInitialState = {
-  userEmail: "",
-  userType: "",
-  isAuthenticated: false,
-  JWToken: "",
+  userEmail: localStorage.getItem("token") ? parseJWT(localStorage.getItem("token")).email : "",
+  userType: localStorage.getItem("token") ? parseJWT(localStorage.getItem("token")).userType : "",
+  isAuthenticated: localStorage.getItem("token") ? true : false,
+  JWToken: localStorage.getItem("token") ? localStorage.getItem("token") : "",
 };
 
 const authSlice = createSlice({

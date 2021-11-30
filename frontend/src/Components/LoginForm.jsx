@@ -4,9 +4,9 @@ import "./AuthForm.css";
 const LoginForm = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    props.loginHandler(credentials);
+    await props.loginHandler(credentials);
   };
 
   const emailHandler = (event) => {
