@@ -2,8 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const authInitialState = {
   userEmail: "",
-  userPassword: "",
+  userType: "",
   isAuthenticated: false,
+  JWToken: "",
 };
 
 const authSlice = createSlice({
@@ -13,12 +14,14 @@ const authSlice = createSlice({
     login(state, action) {
       state.isAuthenticated = true;
       state.userEmail = action.payload.email;
-      state.userPassword = action.payload.password;
+      state.JWToken = action.payload.JWToken;
+      state.userType = action.payload.userType;
     },
     logout(state) {
       state.isAuthenticated = false;
       state.userEmail = "";
-      state.userPassword = "";
+      state.JWToken = "";
+      state.userType = "";
     },
   },
 });

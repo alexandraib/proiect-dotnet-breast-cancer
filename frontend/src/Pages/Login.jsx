@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import LoginForm from "../Components/LoginForm";
-import "./Login.css";
+import "./Auth.css";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../store/auth";
 import { Navigate } from "react-router-dom";
@@ -22,8 +22,13 @@ const Login = () => {
       details.email === hardCodedData.email &&
       details.password === hardCodedData.password
     ) {
+      // INCLUDE JWT in authStore primit de la request
       dispatch(
-        authActions.login({ email: details.email, password: details.password })
+        authActions.login({
+          email: details.email,
+          JWToken: "dummy",
+          userType: "dummy",
+        })
       );
     } else {
       setError("Invalid Credentials");
@@ -32,7 +37,7 @@ const Login = () => {
 
   return (
     <React.Fragment>
-      <div className="login-wrapper">
+      <div className="wrapper">
         {isAuthenticated ? (
           <Navigate to="/welcome" />
         ) : (
