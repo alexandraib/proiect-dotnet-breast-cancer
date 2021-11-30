@@ -13,6 +13,7 @@ const Register = () => {
     //Check with Backend whether the given email already exists in the Database
     //If already exists -> show error that email already exists
     //Otherwise check the JWT for the type and send the request to the backend (must be logged in for this, otherwise -> login page)
+    //Test
     console.log(details);
   };
 
